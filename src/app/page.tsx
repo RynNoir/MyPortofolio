@@ -19,6 +19,7 @@ function PersonJsonLd() {
     jobTitle: siteConfig.role,
     description: siteConfig.description,
     url: getSiteUrl().toString(),
+    image: new URL(siteConfig.photo.portrait.src, getSiteUrl()).toString(),
     email: `mailto:${siteConfig.email}`,
     alumniOf: { "@type": "CollegeOrUniversity", name: siteConfig.education.institution },
     address: { "@type": "PostalAddress", addressLocality: "Padang", addressCountry: "ID" },

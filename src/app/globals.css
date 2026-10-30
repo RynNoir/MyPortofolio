@@ -124,6 +124,13 @@
     letter-spacing: -0.045em;
   }
 
+  /* Hero headline: sized to share the row with the portrait. */
+  .text-hero {
+    font-size: clamp(2.6rem, 1.4rem + 4vw, 5.25rem);
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+  }
+
   .text-section {
     font-size: clamp(2rem, 1.3rem + 3vw, 3.5rem);
     line-height: 1.04;

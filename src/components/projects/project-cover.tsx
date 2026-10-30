@@ -42,7 +42,7 @@ export function ProjectCover({ cover, className, priority }: { cover: Cover; cla
           alt={cover.alt}
           width={cover.width}
           height={cover.height}
-          priority={priority}
+          loading={priority ? "eager" : "lazy"}
           sizes="(min-width: 1024px) 560px, 100vw"
           className="h-auto w-full object-cover"
         />

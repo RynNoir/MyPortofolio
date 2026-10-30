@@ -1,3 +1,6 @@
+import avatar from "@/assets/profile/avatar.jpg";
+import portrait from "@/assets/profile/portrait.jpg";
+
 /**
  * Central profile configuration.
  *
@@ -16,6 +19,17 @@ export const siteConfig = {
   description:
     "Information Technology student at Politeknik Negeri Padang, focused on backend development, Flutter mobile applications, and building practical digital solutions through software engineering and problem-solving.",
   location: "Padang, Indonesia",
+
+  /**
+   * Profile photos (src/assets/profile). Static imports give next/image the
+   * size and a blur placeholder. To change them, replace the two files:
+   * avatar.jpg is a square face crop, portrait.jpg a 4:5 portrait.
+   */
+  photo: {
+    avatar,
+    portrait,
+    alt: "Portrait of Reyhan Dwi Saputra standing on a coastal road with the sea behind him",
+  },
 
   education: {
     institution: "Politeknik Negeri Padang",

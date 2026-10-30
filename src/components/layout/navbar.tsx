@@ -3,6 +3,7 @@
 import { Menu, X } from "lucide-react";
 import { AnimatePresence } from "motion/react";
 import * as m from "motion/react-m";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -57,11 +58,14 @@ export function Navbar() {
       >
         <div className="flex h-14 items-center justify-between gap-4 pr-2 pl-3 sm:h-16 sm:pl-4">
           <Link href="/#home" className="group flex items-center gap-3 rounded-md" onClick={() => setOpen(false)}>
-            <span
-              aria-hidden="true"
-              className="grid size-8 place-items-center rounded-lg bg-lime font-mono text-[0.7rem] font-medium tracking-tight text-ink transition-transform duration-300 group-hover:-rotate-6"
-            >
-              {siteConfig.initials}
+            <span className="relative size-8 shrink-0 overflow-hidden rounded-full ring-2 ring-lime/80 ring-offset-2 ring-offset-ink transition-transform duration-300 group-hover:scale-105 sm:size-9">
+              <Image
+                src={siteConfig.photo.avatar}
+                alt=""
+                sizes="36px"
+                loading="eager"
+                className="size-full object-cover"
+              />
             </span>
             <span className="font-display text-[0.95rem] font-medium tracking-tight text-fg">{siteConfig.name}</span>
           </Link>
